@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <script>
+        function changeImage(action) {
+            var imageElement = document.getElementById("Image");
+
+            var originalImage = "original.jpg";
+            var newImage = "new.jpg";
+
+            if (action === "replace") {
+                imageElement.src = newImage;
+            } else if (action === "revert") {
+                imageElement.src = originalImage;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Pisay SCHOLARS be like when </h1>
+
+    <img id="Image" src="original.jpg" alt="Original Image">
+<br>
+    <button onclick="changeImage('revert')">Before Receiving assesments</button> <br>
+    <button onclick="changeImage('replace')">After Receiving assessments</button> <br>
+
+</body>
+</html>
